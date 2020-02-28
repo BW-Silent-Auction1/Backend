@@ -6,6 +6,7 @@ const helmet = require('helmet');
 //routes
 const usersRouter = require('../users/users-router.js');
 const authRouter = require('../auth/auth-router.js');
+const auctionsRouter = require('../auctions/auctions-router.js');
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(helmet());
 
 app.use('/api/auth/users', usersRouter);
 app.use('/api/auth', authRouter);
+app.use('/api', auctionsRouter);
 
 app.get('/', (req, res) => {
     res.send('<h1>Working baby wohoo!!</h1> ')
