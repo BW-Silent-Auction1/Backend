@@ -32,7 +32,7 @@ router.get("/auctions", (req, res) => {
         .catch(err => {
             res.status(500).json(err)
         })
-})
+});
 
 router.put('/auth/users/:userid/auctions/:auctionid', (req, res) => {
     let id = {id: req.params.auctionid}
@@ -47,6 +47,6 @@ router.put('/auth/users/:userid/auctions/:auctionid', (req, res) => {
         .catch(err => {
             res.status(500).json(err)
         })
-})
+});
 
 module.exports = router;
