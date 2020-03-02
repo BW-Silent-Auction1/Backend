@@ -4,7 +4,14 @@ module.exports = {
     add,
     find,
     findById,
-    findBy
+    findBy,
+    update
+}
+
+function update(items, id) {
+    return db('auctions')
+        .where(id)
+        .update(items)
 }
 
 async function add(auction) {
