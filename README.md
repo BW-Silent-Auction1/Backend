@@ -21,6 +21,7 @@ This document describes the endpoints and methods available.
 ### Items: /api/items
 
 | name           | item_description         | auctions_id         | pictures_id          |
+|----------------|--------------------------|---------------------|----------------------|
 | *required*     |                          | *foreign key*       | *foreign key*        |
 
 
