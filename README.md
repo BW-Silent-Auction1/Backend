@@ -23,6 +23,8 @@ This document describes the endpoints and methods available.
 
 | GET    | /api/items | Returns a list of all items  |
 |--------|------------|------------------------------|
+| GET    | /api/items/:id | Returns an item by its id|
+|--------|----------------|--------------------------|
 
 ### Bids 
 
