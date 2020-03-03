@@ -8,7 +8,7 @@ This document describes the endpoints and methods available.
 
 ## Tables: 
 
-### Protected / Auth Routes
+### Protected / Auth Routes: /api/auth
 
 
 ### Users: 
@@ -18,13 +18,20 @@ This document describes the endpoints and methods available.
 ### Auctions 
 
 
-### Items 
-**/api/items**
+### Items: /api/items
 
-| GET    | /api/items | Returns a list of all items  |
-|--------|------------|------------------------------|
-| GET    | /api/items/:id | Returns an item by its id|
-|--------|----------------|--------------------------|
+| name           | item_description         | auctions_id         | pictures_id          |
+| *required*     |                          | *foreign key*       | *foreign key*        |
+
+
+**METHODS**
+
+| GET    | /api/items          | Returns a list of all items  |
+|--------|---------------------|------------------------------|
+| GET    | /api/items/:id      | Returns an item by its id    |
+|--------|---------------------|------------------------------|
+
+POST 
 
 ### Bids 
 
