@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const Users = require('./users-model.js');
+const restricted = require('../auth/restricted-middleware.js')
 
 // return list of all users
-router.get("/", (req, res) => {
+router.get("/", restricted, (req, res) => {
     return Users.find().then(user => {
         res.status(201).json(user)
     })
