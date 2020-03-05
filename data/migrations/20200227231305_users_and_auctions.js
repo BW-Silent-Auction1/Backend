@@ -13,8 +13,9 @@ exports.up = function(knex) {
         tbl.string('auction_description', 1028).notNullable();
         tbl.integer('user_id').unsigned()
         tbl.foreign('user_id').references('users.id');
-        tbl.text('starttime').defaultTo("2020-02-28 13:30:00").notNullable();
-        tbl.text('endtime').notNullable();
+        tbl.text('starttime').defaultTo(Date.now()).notNullable();
+        tbl.text('endtime').defaultTo(Date.now() + (1000 * 60 * 5));
+        tbl.integer('current_price').defaultTo(0);
         tbl.boolean('isActive').defaultTo(true).notNullable()
     })
 };

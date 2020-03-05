@@ -58,7 +58,8 @@ example:
 **METHODS**
 `GET` methods for `bids`
 */api/bids*   -- returns all bids in the database
-*/api/bids/:id    -- returns a specific bid based on the `id` passed in the url
+*/api/bids/:id*    -- returns a specific bid based on the `id` passed in the url
+
 
 
 ### Pictures 
